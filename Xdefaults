@@ -1,0 +1,33 @@
+Xterm*background: black
+Xterm*foreground: white
+Xterm*faceName:   BitStream Vera Sans Mono
+Xterm*locale:     utf-8
+
+Rxvt*background:       black
+Rxvt*foreground:       white
+Rxvt*scrollBar:        False
+Rxvt*scrollTtyOutput: False
+Rxvt*TtyKeyPress:      True
+Rxvt*SaveLines:        1000
+Rxvt*faceName:         xft:BitStream Vera Sans Mono:size=10
+Rxvt*locale:           utf-8
+
+URxvt*geometry:              80x25
+URxvt*background:            #000000
+URxvt*foreground:            #ffffff
+URxvt*reverseVideo:          false
+URxvt*tintColor:             #ffffff
+URxvt*font:                  xft:Bitstream Vera Sans Mono:pixelsize=12
+URxvt*boldFont:              9x15bold,xft:Bitstream Vera Sans Mono
+URxvt*scrollBar:             false
+URxvt*scrollBar_floating:    false
+URxvt*scrollBar_right:       false
+URxvt*scrollColor:           black
+URxvt*scrollstyle:           xterm
+URxvt*saveLines:             5500
+URxvt*cursorColor:           #00ff00
+URxvt*cursorBlink:           true
+URxvt*colorBD:               white
+URxvt*borderLess:            false
+URxvt*perl-ext-common:       default,matcher
+URxvt*urlLauncher:           firefox
