@@ -8,6 +8,7 @@ usrmod=$HOME/.Xmodmap
 bepo=$HOME/.bepo/
 #wm=/usr/local/bin/openbox-session
 wm=/usr/bin/fluxbox
+#wm=/usr/local/bin/ratpoison
 
 echo "Turning off beep"
 xset b off
@@ -26,7 +27,7 @@ echo "Loading resources"
 [ -f $usrres ] && xrdb $usrres
 
 echo "Loading urxvt-deamon"
-urxvtd -q -f -o
+( ps aux | grep urxvtd | grep -v grep ) || urxvtd -q -f -o
 
 echo "Starting `basename $wm`"
 $wm  &
