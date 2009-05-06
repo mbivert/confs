@@ -1,0 +1,41 @@
+# Written for ratpoison-1.4.5
+
+# Reset the prefix key.
+escape C-a
+
+# Reset the cursor.
+exec xsetroot -cursor_name letf_ptr
+
+# Some bindings
+bind C-d
+
+# Firefox
+bind ecircumflex exec firefox
+# Music.
+bind egrave exec mpc prev; ratpoison -d 0:0 -c "echo `mpc | head -1`"
+bind o exec mpc next; ratpoison -d 0:0 -c "echo `mpc | head -1`"
+bind C-o exec mpc next; ratpoison -d 0:0 -c "echo `mpc | head -1`"
+bind q exec mpc toggle; ratpoison -d 0:0 -c "echo mpc toggled."
+bind agrave exec ratpoison -d 0:0 -c "echo `mpc | head -1`"
+bind at exec amixer set PCM 2dB-; ratpoison -d 0:0 -c "echo `amixer get PCM | sed -n '$s/.*\(\[[0-9]*%\]\).*/\1/p'`"
+bind plus exec amixer set PCM 2dB+; ratpoison -d 0:0 -c "echo `amixer get PCM | sed -n '$s/.*\(\[[0-9]*%\]\).*/\1/p'`"
+
+# Hack from John Meachan with date format modified
+bind a exec ratpoison -d 0:0 -c  "echo `date +'%R:%S - %A %n    %d/%m/%y - %B'`  `cal | tail -n +2 | sed -e 's/^Su/\n\n Su/' -e 's/.*/ & /' -e \"s/\ $(date +%e)\ /\<$(date +%e)\>/\"`"
+
+# Use the name of the program(s) rather than the title in the windows list.
+defwinname name
+
+# Get ride of the 1px border around windows.
+set border 0
+
+# Set some aliases. (Vi-like moving)
+bind c focusleft
+bind t focusdown
+bind s focusup
+bind r focusright
+
+# Rebind.
+bind z next
+bind ccedilla resize
+bind j split
