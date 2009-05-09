@@ -7,8 +7,8 @@ usrmod=$HOME/.Xmodmap
 
 bepo=$HOME/.bepo/
 #wm=/usr/local/bin/openbox-session
-wm=/usr/bin/fluxbox
-#wm=/usr/local/bin/ratpoison
+#wm=/usr/bin/fluxbox
+wm=/usr/local/bin/ratpoison
 
 echo "Turning off beep"
 xset b off

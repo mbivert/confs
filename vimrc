@@ -286,3 +286,4 @@ set backup
 " Swap updated after every 50 chars.
 set updatecount=50
 
+" vim: ft=vim
