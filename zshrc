@@ -11,8 +11,6 @@ if [[ $SHELL =~ ".*zsh$" ]]; then
    limit stack 8192
    limit core     0
    limit -s
-   # Remove duplicates.
-   typeset -U path cdpath fpath manpath
    # Load colors :)
    autoload -U colors
    colors
@@ -22,8 +20,9 @@ umask 022
 # ------------------------------------------------------------------------------
 # -- Set the path --
 # First, a single function to add an element to the path.
+# XXX Cannot use bash's references in zsh.
 function add_path () { [ -d "$1" ] && PATH=$PATH:"$1"; }
-
+function add_mpath () { [ -d "$1" ] && MANPATH=$MANPATH:"$1"; }
 # Now, set it.
 PATH="/bin:/usr/bin:/usr/games"
 add_path "/usr/local/bin"
@@ -33,7 +32,14 @@ add_path "/usr/lib/java/jre/bin"
 add_path "/usr/lib/qt/bin"
 add_path "/usr/shame/texmf/bin"
 add_path "/home/mathieu/bin"
+
+add_mpath "/usr/local/share/man"
+add_mpath "/usr/share/man"
 export PATH
+export MANPATH
+
+# Remove duplicates.
+[[ "$SHELL" =~ '.*zsh' ]] && typeset -U path cdpath fpath manpath
 
 # ------------------------------------------------------------------------------
 # -- Aliases --
