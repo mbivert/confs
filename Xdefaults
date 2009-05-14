@@ -31,3 +31,4 @@ URxvt*colorBD:               white
 URxvt*borderLess:            false
 URxvt*perl-ext-common:       default,matcher
 URxvt*urlLauncher:           firefox
+URxvt*.keysym.C-o:           perl:matcher

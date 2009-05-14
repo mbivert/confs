@@ -44,7 +44,7 @@ export MANPATH
 # ------------------------------------------------------------------------------
 # -- Aliases --
 # We assume that we use the GNU ls only if we run a Linux based OS.
-[[ `uname` =~ 'Linux' ]] && alias ls="ls --color=auto -h" || alias ls="ls -h"
+[[ `uname` =~ 'Linux' ]] && alias ls="ls --color=auto -hG" || alias ls="ls -hG"
 # Some shortucts for ls.
 alias l=ls
 alias la="ls -a"
