@@ -1,0 +1,50 @@
+" Written for vimrc-7.2
+
+" Remap é on w.
+noremap é w
+noremap É W
+
+" Remap so we can delete word when we're not at the beginning.
+noremap aé aw
+noremap aÉ aW
+" Remap so that w acts like a <c-W>
+noremap w <C-w>
+noremap W <C-w><C-w>
+
+" [HJKL] -> {CTSR}
+noremap c h
+noremap r l
+noremap t j
+noremap s k
+noremap C H
+noremap R L
+noremap T J
+noremap S K
+noremap zs zj
+noremap zt zk
+
+" {HJKL} <- [CTSR]
+noremap j t
+noremap J T
+noremap l c
+noremap L C
+noremap h r
+noremap H R
+noremap k s
+noremap K S
+noremap ]k ]s
+noremap [k [s
+
+" Remap some command because of g.
+" Next/Previous Line, screen (in a sentence).
+noremap gs gk
+noremap gt gj
+" Next/Previous tab
+noremap gb gT
+noremap gé gt
+" First of last tab.
+noremap gB :exe "silent! tabfirst"<CR>
+noremap gÉ :exe "silent! tablast"<CR>
+" Beginning of the line.
+noremap g" g0
+
